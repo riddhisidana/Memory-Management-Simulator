@@ -1,22 +1,7 @@
-CXX ?= g++
-# Default flags: include headers and target C++ standard (overrideable)
-CXXFLAGS ?= -Iinclude -std=c++23
-TARGET = memory_sim
-# Use wildcard so adding/removing sources is automatic
-SRCS = $(wildcard src/*.cpp)
-OBJS = $(SRCS:.cpp=.o)
-
-$(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
-
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-clean:
-	rm -f $(OBJS) $(TARGET)
-
-.PHONY: clean
+# FIXME: Makefile isn't working correctly on all systems. 
+# Will correct this at a later stage. 
+# For now, compile manually using the command in README.md.
 
 
-
-
+# on the root run :
+# g++ -Iinclude -std=c++23 src/*.cpp src/buddy/*.cpp src/cache/*.cpp src/contiguous/*.cpp -o memory_sim

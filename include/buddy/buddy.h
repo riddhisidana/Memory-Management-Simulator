@@ -28,6 +28,7 @@ struct BuddyBlock
     BuddyBlock *prev;
 };
 
+// Functions for buddy
 void buddy_init(size_t total_size);
 
 void *buddy_allocate(size_t size, int process_id);

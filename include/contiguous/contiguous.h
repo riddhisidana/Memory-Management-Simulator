@@ -20,6 +20,7 @@ enum class AllocationStrategy
     worst_fit
 };
 
+//functions for contiguous
 void init_memory(size_t total_size, AllocationStrategy strategy);
 
 Block *allocate(size_t size, int process_id);
