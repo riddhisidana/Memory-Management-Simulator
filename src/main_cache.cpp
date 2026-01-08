@@ -17,9 +17,9 @@ Commands:
     display            - Show cache contents
     stats              - Show multilevel statistics
     clear              - Clear all cache levels
-    mode               - Return to main menu
+    mode               - Return to mode selection menu
     help               - Show help
-    quit               - Exit
+    quit               - Exit program completely
 =================================================
 )";
 }
@@ -134,7 +134,8 @@ int run_cache_mode()
         }
         else if (cmd == "quit")
         {
-            return 0;
+            cout << "Goodbye!\n";
+            exit(2); // Exit entire program
         }
         else
         {

@@ -187,7 +187,7 @@ bool buddy_deallocate(int process_id)
 
         // Double the size and move up a level
         block->size *= 2;
-        block_size = block->size; // CRITICAL: Update block_size for next iteration
+        block_size = block->size;
         block->is_free = true;
         block->process_id = -1;
         level++;

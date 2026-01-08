@@ -67,6 +67,7 @@ A functional simulation of a multilevel set-associative cache.
 
 ---
 
+
 ## Performance Metrics
 The simulator calculates several key performance indicators:
 - **Utilization**: (Allocated Memory / Total Memory) * 100.
@@ -76,8 +77,34 @@ The simulator calculates several key performance indicators:
 
 ---
 
+## Limitations and Simplifications
+
+### Contiguous Allocator
+- **Single Memory Pool**
+- **No Real Memory**
+- **Integer Process IDs**
+- **Synchronous Operations**
+
+### Buddy System
+- **Power-of-Two Sizes**
+- **Fixed Maximum Levels** : `MAX_LEVELS = 6` (block sizes from 32B to 1024B by default).
+- **Minimum Block Size**: Fixed at 32 bytes (`MIN_BLOCK_SIZE`).
+- **No Partial Coalescing**
+
+### Cache Simulator
+- **FIFO Only**
+- **No Cache Coherency**
+- **Simplified Address Model**
+
+### General
+- **No Persistence**
+- **No Virtual Memory**
+
+---
+
 ## Future Improvements
 - **LRU/LFU Replacement Policies**: Add more advanced replacement algorithms for the Cache Simulator.
-- **Virtual Memory**: Implement virtual memory and paging.
+- **Virtual Memory**: Implement virtual memory and paging
+
 
 ---

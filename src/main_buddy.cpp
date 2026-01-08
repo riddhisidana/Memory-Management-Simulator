@@ -19,7 +19,7 @@ Commands:
     clear      - Reset buddy allocator (keep same total memory)
     mode       - Return to mode selection menu
     help       - Show this help
-    quit       - Exit simulator
+    quit       - Exit program completely
 ========================================================
 )";
 }
@@ -96,6 +96,12 @@ Enter total memory sizes (bytes): )";
             buddy_reset();
             cout << "Buddy allocator reset.\n";
         }
+        else if (command == "quit")
+        {
+            buddy_shutdown();
+            cout << "Goodbye!\n";
+            exit(2); // Exit entire program
+        }
         else if (command == "mode")
         {
             cout << "Returning to mode selection menu...\n";
@@ -105,10 +111,6 @@ Enter total memory sizes (bytes): )";
         else if (command == "help")
         {
             printBuddyHelp();
-        }
-        else if (command == "quit")
-        {
-            break;
         }
         else
         {

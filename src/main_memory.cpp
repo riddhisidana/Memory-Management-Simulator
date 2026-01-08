@@ -24,7 +24,7 @@ Commands:
   clear               - Reset memory to initial state
   mode                - Return to mode selection menu
   help                - Show this help
-  quit                - Exit simulator
+  quit                - Exit program completely
 =================================================
 )";
 }
@@ -164,7 +164,9 @@ int run_memory_mode()
         }
         else if (command == "quit")
         {
-            break;
+            shutdown_memory();
+            cout << "Goodbye!\n";
+            exit(2); // Exit entire program
         }
         else
         {
