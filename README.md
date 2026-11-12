@@ -3,7 +3,6 @@
 A comprehensive C++ simulation tool designed to demonstrate and visualize various memory management techniques used in modern operating systems.
 
 ## Features
-
 The simulator is divided into three primary modules, each focusing on a different aspect of memory management:
 
 ### 1. Contiguous Allocation Simulator
